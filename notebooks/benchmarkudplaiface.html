@@ -150,12 +150,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../lambert.html">Lambert class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../planet.html">Planet class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../udplas.html">List of user implemented planets (UDPLAs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../propagation.html">Numerical Propagation</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="anomalies.html">The various anomalies in pykep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="epochs.html">Epochs and Julian Dates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
 </ul>
 </li>
 </ul>
@@ -432,7 +434,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udpla.eph
- Real time: 0.46258 seconds
+ Real time: 0.34984 seconds
 </pre></div>
 </div>
 </div>
@@ -451,7 +453,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pla.eph
- Real time: 0.21440 seconds
+ Real time: 0.16811 seconds
 </pre></div>
 </div>
 </div>
@@ -469,7 +471,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pla.eph_v
- Real time: 0.59695 seconds
+ Real time: 0.46862 seconds
 </pre></div>
 </div>
 </div>
@@ -491,7 +493,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sgp4
- Real time: 0.45146 seconds
+ Real time: 0.33954 seconds
 </pre></div>
 </div>
 </div>
@@ -512,7 +514,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sgp4 - vectorized
- Real time: 0.56273 seconds
+ Real time: 0.41982 seconds
 </pre></div>
 </div>
 </div>
@@ -529,11 +531,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udpla.eph -&gt; 0.46258
-pla.eph -&gt; 0.21440
-eph_v.eph -&gt; 0.59695
-sgp4 -&gt; 0.45146
-sgp4_v -&gt; 0.56273
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udpla.eph -&gt; 0.34984
+pla.eph -&gt; 0.16811
+eph_v.eph -&gt; 0.46862
+sgp4 -&gt; 0.33954
+sgp4_v -&gt; 0.41982
 </pre></div>
 </div>
 </div>
@@ -561,7 +563,7 @@ sgp4_v -&gt; 0.56273
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udpla.eph
- Real time: 0.31526 seconds
+ Real time: 0.26299 seconds
 </pre></div>
 </div>
 </div>
@@ -580,7 +582,7 @@ sgp4_v -&gt; 0.56273
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pla.eph
- Real time: 0.41158 seconds
+ Real time: 0.34019 seconds
 </pre></div>
 </div>
 </div>
@@ -598,7 +600,7 @@ sgp4_v -&gt; 0.56273
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pla.eph_v
- Real time: 0.13279 seconds
+ Real time: 0.11559 seconds
 </pre></div>
 </div>
 </div>
@@ -617,7 +619,7 @@ sgp4_v -&gt; 0.56273
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spice
- Real time: 0.20370 seconds
+ Real time: 0.17433 seconds
 </pre></div>
 </div>
 </div>
@@ -635,7 +637,7 @@ sgp4_v -&gt; 0.56273
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spicev
- Real time: 0.11551 seconds
+ Real time: 0.09947 seconds
 </pre></div>
 </div>
 </div>
@@ -652,11 +654,11 @@ sgp4_v -&gt; 0.56273
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udpla.eph -&gt; 0.31526
-pla.eph -&gt; 0.41158
-eph_v.eph -&gt; 0.13279
-spice -&gt; 0.20370
-spice_v -&gt; 0.11551
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udpla.eph -&gt; 0.26299
+pla.eph -&gt; 0.34019
+eph_v.eph -&gt; 0.11559
+spice -&gt; 0.17433
+spice_v -&gt; 0.09947
 </pre></div>
 </div>
 </div>
