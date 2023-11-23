@@ -51,7 +51,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Epochs and Julian Dates" href="epochs.html" />
-    <link rel="prev" title="Tutorials" href="../tutorials.html" />
+    <link rel="prev" title="Basic" href="../tutorials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -144,8 +144,8 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
-<ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../constants.html">Global constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../anomalies.html">Anomalies Conversions</a></li>
@@ -156,16 +156,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../udplas.html">List of user implemented planets (UDPLAs)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../propagation.html">Numerical Propagation</a></li>
 
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">The various anomalies in pykep</a></li>
-<li class="toctree-l2"><a class="reference internal" href="epochs.html">Epochs and Julian Dates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot.html">The plot module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorials.html">Basic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">The various anomalies in pykep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="epochs.html">Epochs and Julian Dates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planet.html">Ephemerides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -442,7 +448,7 @@ M = E - e \sin E
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ba67cf351af9c0c5feb6c9cebd0b06573712a1376cfa851bfa43e08b6b98e94e.png" src="../_images/ba67cf351af9c0c5feb6c9cebd0b06573712a1376cfa851bfa43e08b6b98e94e.png" />
+<img alt="../_images/ab3f16a2c38564afd1b4a76449d92101f0cbd363e3b5be4901ebbd5f9b3e8b24.png" src="../_images/ab3f16a2c38564afd1b4a76449d92101f0cbd363e3b5be4901ebbd5f9b3e8b24.png" />
 </div>
 </div>
 <p>and do the same for, e.g. the True Anomaly relation to <span class="math notranslate nohighlight">\(M\)</span></p>
@@ -458,7 +464,7 @@ M = E - e \sin E
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9b901a103b5a8689b1bce786604865e9cd19bb8f40e2d5c7759767aa20954a32.png" src="../_images/9b901a103b5a8689b1bce786604865e9cd19bb8f40e2d5c7759767aa20954a32.png" />
+<img alt="../_images/2786eff5279f3efbb94bdadcd42a566c0b9e352bbe2a0176883628aa36dff59e.png" src="../_images/2786eff5279f3efbb94bdadcd42a566c0b9e352bbe2a0176883628aa36dff59e.png" />
 </div>
 </div>
 <p>Finally we may want to know about the comutational speed of these functions. Let us compute 100000 times 100 Eccentric anomalies from the Mean anomaly (i.e. solve 1e7 times Kepler’s equation):</p>
@@ -473,7 +479,7 @@ M = E - e \sin E
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We solve 5740689 Kepler&#39;s Equations each second.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We solve 5738683 Kepler&#39;s Equations each second.
 </pre></div>
 </div>
 </div>
@@ -497,7 +503,7 @@ M = E - e \sin E
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tutorials</p>
+        <p class="prev-next-title">Basic</p>
       </div>
     </a>
     <a class="right-next"
