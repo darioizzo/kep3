@@ -19,24 +19,24 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -44,12 +44,12 @@
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'plot';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="Numerical Propagation" href="propagation.html" />
+    <link rel="next" title="Numerical Propagation" href="propagation.html" />
+    <link rel="prev" title="Planet class" href="planet.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -59,10 +59,9 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -103,11 +102,14 @@
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,21 +143,33 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="api.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="constants.html">Global constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="anomalies.html">Anomalies Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">Global constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="elements.html">Orbital Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="epoch.html">Epoch class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lambert.html">Lambert class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leg.html">Interplanetary transfer legs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="planet.html">Planet class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udplas.html">List of user implemented planets (UDPLAs)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">The plot module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagation.html">Numerical Propagation</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">The plot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udpla.html">List of user implemented planets (UDPLAs)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
@@ -168,6 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="notebooks/planet.html">Ephemerides</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/sims_flanagan_leg.html">The Sims-Flanagan trajectory leg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/plotting.html">Plotting</a></li>
 </ul>
 </li>
@@ -377,6 +392,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_solar_system"><code class="docutils literal notranslate"><span class="pre">add_solar_system()</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-trajectories">Plotting trajectories</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_lambert"><code class="docutils literal notranslate"><span class="pre">add_lambert()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_ballistic_arc"><code class="docutils literal notranslate"><span class="pre">add_ballistic_arc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_sf_leg"><code class="docutils literal notranslate"><span class="pre">add_sf_leg()</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -386,7 +407,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="the-plot-module">
 <span id="plot"></span><h1>The plot module<a class="headerlink" href="#the-plot-module" title="Permalink to this heading">#</a></h1>
@@ -483,6 +504,83 @@ document.write(`
 </dd></dl>
 
 </section>
+<section id="plotting-trajectories">
+<h2>Plotting trajectories<a class="headerlink" href="#plotting-trajectories" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pykep.plot.add_lambert">
+<span class="sig-prename descclassname"><span class="pre">pykep.plot.</span></span><span class="sig-name descname"><span class="pre">add_lambert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">149597870700.0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pykep.plot.add_lambert" title="Permalink to this definition">#</a></dt>
+<dd><p>Add Lambert’s problem solution trajectory to a 3D matplotlib Axes.</p>
+<dl>
+<dt>Args:</dt><dd><p><em>ax</em> (<a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d.axes3d.Axes3D</span></code></a>): The 3D Axes object to which the trajectory will be added.</p>
+<p><em>lp</em> (<a class="reference internal" href="lambert.html#pykep.lambert_problem" title="pykep.lambert_problem"><code class="xref py py-class docutils literal notranslate"><span class="pre">lambert_problem</span></code></a>): The Lambert’s problem object containing relevant information.</p>
+<p><em>N</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional): The number of points to generate along the trajectory. Default is 60.</p>
+<p><em>sol</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional): The solution index for Lambert’s problem. Default is 0.</p>
+<p><em>units</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, optional): The unit conversion factor for plotting. Default is _pk.AU.</p>
+<p><em>**kwargs</em>: Additional keyword arguments to pass to the Axes3D.plot function.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If the specified solution index (sol) is greater than twice the maximum number of revolutions (Nmax).</p>
+</dd>
+<dt>Notes:</dt><dd><p>This function visualizes the trajectory of Lambert’s problem solution on the provided 3D Axes object.
+The trajectory is computed based on the initial and final positions, velocities, and gravitational parameter.
+The integration grid is defined based on the specified solution index and angle computations.
+The resulting trajectory is plotted on the given Axes object using the provided unit conversion factor.</p>
+</dd>
+<dt>Returns:</dt><dd><p><a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d.axes3d.Axes3D</span></code></a>: The modified Axes object with the Lambert’s problem trajectory added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pykep.plot.add_ballistic_arc">
+<span class="sig-prename descclassname"><span class="pre">pykep.plot.</span></span><span class="sig-name descname"><span class="pre">add_ballistic_arc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rv0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">149597870700.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pykep.plot.add_ballistic_arc" title="Permalink to this definition">#</a></dt>
+<dd><p>Add a ballistic trajectory arc to a 3D matplotlib Axes.</p>
+<dl>
+<dt>Args:</dt><dd><p><em>ax</em> (<a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d.axes3d.Axes3D</span></code></a>): The 3D Axes object to which the ballistic arc will be added.</p>
+<p><em>rv0</em> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>): Initial position and velocity vector in Cartesian coordinates.</p>
+<p><em>tof</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>): Time of flight for the ballistic arc.</p>
+<p><em>mu</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>): Gravitational parameter of the central body.</p>
+<p><em>units</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>): The unit conversion factor for plotting. Default is pk.AU.</p>
+<p><em>N</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>): The number of points to generate along the ballistic arc. Default is 60.</p>
+<p><em>**kwargs</em>: Additional keyword arguments to pass to the Axes3D.plot function.</p>
+</dd>
+<dt>Notes:</dt><dd><ul class="simple">
+<li><p>This function visualizes a ballistic trajectory arc on the provided 3D Axes object.</p></li>
+<li><p>The trajectory is computed based on the initial position, velocity, time of flight, and gravitational parameter.</p></li>
+<li><p>The resulting trajectory is plotted on the given Axes object using the provided unit conversion factor.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p><a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d.axes3d.Axes3D</span></code></a>: The modified Axes object with the ballistic arc trajectory added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pykep.plot.add_sf_leg">
+<span class="sig-prename descclassname"><span class="pre">pykep.plot.</span></span><span class="sig-name descname"><span class="pre">add_sf_leg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="leg.html#pykep.leg.sims_flanagan" title="leg._sims_flanagan"><span class="pre">_sims_flanagan</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">149597870700.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_midpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_gridpoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_throttles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arrow_length_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pykep.plot.add_sf_leg" title="Permalink to this definition">#</a></dt>
+<dd><p>Add a trajectory leg of Sims-Flanagan problem to a 3D matplotlib Axes.</p>
+<dl>
+<dt>Args:</dt><dd><p><em>ax</em> (<a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d.axes3d.Axes3D</span></code></a>): The 3D Axes object to which the trajectory leg will be added.</p>
+<p><em>sf</em> (<a class="reference internal" href="leg.html#pykep.leg.sims_flanagan" title="pykep.leg.sims_flanagan"><code class="xref py py-class docutils literal notranslate"><span class="pre">sims_flanagan</span></code></a>): The Sims-Flanagan object containing relevant information.</p>
+<p><em>units</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, optional): The unit conversion factor for plotting. Default is pk.AU.</p>
+<p><em>N</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, optional): The number of points to generate along each segment of the trajectory. Default is 10.</p>
+<p><em>show_midpoints</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional): If True, midpoints of each segment are shown. Default is False.</p>
+<p><em>show_gridpoints</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional): If True, gridpoints of the trajectory are shown. Default is False.</p>
+<p><em>show_throttles</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>, optional): If True, thrust vectors at midpoints are shown. Default is False.</p>
+<p><em>length</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, optional): The length of the thrust vectors when show_throttles is True. Default is 0.1.</p>
+<p><em>arrow_length_ratio</em> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, optional): The ratio of arrow length to the total length when show_throttles is True. Default is 0.05.</p>
+<p><em>**kwargs</em>: Additional keyword arguments to pass to the Axes3D.plot function.</p>
+</dd>
+<dt>Notes:</dt><dd><ul class="simple">
+<li><p>This function visualizes a Sims-Flanagan trajectory leg on the provided 3D Axes object.</p></li>
+<li><p>Midpoints, gridpoints, and thrust vectors can be optionally shown based on the provided parameters.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><p><a class="reference external" href="https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html#mpl_toolkits.mplot3d.axes3d.Axes3D" title="(in Matplotlib v3.8.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d.axes3d.Axes3D</span></code></a>: The modified Axes object with the Sims-Flanagan leg added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 </section>
 
 
@@ -497,20 +595,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="propagation.html"
+       href="planet.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Numerical Propagation</p>
+        <p class="prev-next-title">Planet class</p>
       </div>
     </a>
     <a class="right-next"
-       href="bibliography.html"
+       href="propagation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bibliography</p>
+        <p class="prev-next-title">Numerical Propagation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -522,6 +620,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -538,6 +637,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_planet"><code class="docutils literal notranslate"><span class="pre">add_planet()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_planet_orbit"><code class="docutils literal notranslate"><span class="pre">add_planet_orbit()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_solar_system"><code class="docutils literal notranslate"><span class="pre">add_solar_system()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-trajectories">Plotting trajectories</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_lambert"><code class="docutils literal notranslate"><span class="pre">add_lambert()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_ballistic_arc"><code class="docutils literal notranslate"><span class="pre">add_ballistic_arc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pykep.plot.add_sf_leg"><code class="docutils literal notranslate"><span class="pre">add_sf_leg()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -588,8 +693,8 @@ By Dario Izzo and Francesco Biscani
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

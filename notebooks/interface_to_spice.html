@@ -19,24 +19,24 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +44,7 @@
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/interface_to_spice';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -59,10 +59,9 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -103,11 +102,14 @@
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,21 +143,33 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../constants.html">Global constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../anomalies.html">Anomalies Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constants.html">Global constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../elements.html">Orbital Elements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../epoch.html">Epoch class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lambert.html">Lambert class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../leg.html">Interplanetary transfer legs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../planet.html">Planet class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../udplas.html">List of user implemented planets (UDPLAs)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plot.html">The plot module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../propagation.html">Numerical Propagation</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../plot.html">The plot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../udpla.html">List of user implemented planets (UDPLAs)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
@@ -168,6 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="planet.html">Ephemerides</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sims_flanagan_leg.html">The Sims-Flanagan trajectory leg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting</a></li>
 </ul>
 </li>
@@ -408,7 +423,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="interfacing-to-spice-and-jpl-de-ephs">
 <h1>Interfacing to SPICE and JPL DE ephs<a class="headerlink" href="#interfacing-to-spice-and-jpl-de-ephs" title="Permalink to this heading">#</a></h1>
@@ -470,7 +485,7 @@ to observations, simulations or historical data and encapsulated into <a class="
 </div>
 </div>
 <p>This is done only once and we can now forget about it (unless memory is an issue and we want to unload the data, in which case we provide a corresponding <code class="xref py py-func docutils literal notranslate"><span class="pre">unload_spice_kernels()</span></code> function).</p>
-<p>We now instantiate a <a class="reference internal" href="../planet.html#pykep.planet" title="pykep.planet"><code class="xref py py-class docutils literal notranslate"><span class="pre">planet</span></code></a> form the UDPLA <a class="reference internal" href="../udplas.html#pykep.udpla.spice" title="pykep.udpla.spice"><code class="xref py py-class docutils literal notranslate"><span class="pre">spice</span></code></a>.</p>
+<p>We now instantiate a <a class="reference internal" href="../planet.html#pykep.planet" title="pykep.planet"><code class="xref py py-class docutils literal notranslate"><span class="pre">planet</span></code></a> form the UDPLA <a class="reference internal" href="../udpla.html#pykep.udpla.spice" title="pykep.udpla.spice"><code class="xref py py-class docutils literal notranslate"><span class="pre">spice</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">udpla</span> <span class="o">=</span> <span class="n">pk</span><span class="o">.</span><span class="n">udpla</span><span class="o">.</span><span class="n">spice</span><span class="p">(</span><span class="s2">&quot;JUPITER BARYCENTER&quot;</span><span class="p">,</span> <span class="s2">&quot;ECLIPJ2000&quot;</span><span class="p">,</span> <span class="s2">&quot;SSB&quot;</span><span class="p">)</span>
@@ -512,7 +527,7 @@ Reference Frame: ECLIPJ2000
 </div>
 </div>
 </div>
-<p>Note how many physical parameters of the body are not defined, as for this particular UDPLA (the <a class="reference internal" href="../udplas.html#pykep.udpla.spice" title="pykep.udpla.spice"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.udpla.spice</span></code></a>), the ephemerides computations are interpolated from tables and hence do not require any physical parameters. The user can always define them if needed.</p>
+<p>Note how many physical parameters of the body are not defined, as for this particular UDPLA (the <a class="reference internal" href="../udpla.html#pykep.udpla.spice" title="pykep.udpla.spice"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.udpla.spice</span></code></a>), the ephemerides computations are interpolated from tables and hence do not require any physical parameters. The user can always define them if needed.</p>
 <section id="id1">
 <h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 </section>
@@ -527,7 +542,7 @@ Reference Frame: ECLIPJ2000
 </div>
 </div>
 </div>
-<p>The UDPLA <a class="reference internal" href="../udplas.html#pykep.udpla.de440s" title="pykep.udpla.de440s"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.udpla.de440s</span></code></a> automatically loads the correct kernel shipped with <code class="docutils literal notranslate"><span class="pre">pykep</span></code> module.</p>
+<p>The UDPLA <a class="reference internal" href="../udpla.html#pykep.udpla.de440s" title="pykep.udpla.de440s"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.udpla.de440s</span></code></a> automatically loads the correct kernel shipped with <code class="docutils literal notranslate"><span class="pre">pykep</span></code> module.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">udpla</span> <span class="o">=</span> <span class="n">pk</span><span class="o">.</span><span class="n">udpla</span><span class="o">.</span><span class="n">de440s</span><span class="p">(</span><span class="s2">&quot;JUPITER BARYCENTER&quot;</span><span class="p">,</span> <span class="s2">&quot;ECLIPJ2000&quot;</span><span class="p">,</span> <span class="s2">&quot;SSB&quot;</span><span class="p">)</span>
@@ -545,7 +560,7 @@ Velocity (m/s): [-12935.993235030832, 3306.5234815642566, 275.73217606979927]
 </div>
 </div>
 </div>
-<p>What if we wanted a different reference frame? Well then we may either instantiate a different <a class="reference internal" href="../udplas.html#pykep.udpla.de440s" title="pykep.udpla.de440s"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.udpla.de440s</span></code></a> with a different frame, and/or observer, or perform the transformation ourselves. If we want to perform the transformation ourselves, we need a rotation matrix, and we would then get it as follow:</p>
+<p>What if we wanted a different reference frame? Well then we may either instantiate a different <a class="reference internal" href="../udpla.html#pykep.udpla.de440s" title="pykep.udpla.de440s"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.udpla.de440s</span></code></a> with a different frame, and/or observer, or perform the transformation ourselves. If we want to perform the transformation ourselves, we need a rotation matrix, and we would then get it as follow:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">pk</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">rotation_matrix</span><span class="p">(</span><span class="s2">&quot;ECLIPJ2000&quot;</span><span class="p">,</span> <span class="s2">&quot;J2000&quot;</span><span class="p">)</span>
@@ -625,6 +640,7 @@ We then perform the transformation.</p>
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
@@ -681,8 +697,8 @@ By Dario Izzo and Francesco Biscani
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
