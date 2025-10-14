@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Surrogate Primer Vector &#8212; pykep 0.0.1 documentation</title>
+    <title>Surrogate Primer Vector &#8212; pykep 3.0.0 documentation</title>
   
   
   
@@ -139,8 +139,8 @@
       
     
     
-    <img src="../_static/pykep_logo.png" class="logo__image only-light" alt="pykep 0.0.1 documentation - Home"/>
-    <script>document.write(`<img src="../_static/pykep_logo.png" class="logo__image only-dark" alt="pykep 0.0.1 documentation - Home"/>`);</script>
+    <img src="../_static/pykep_logo.png" class="logo__image only-light" alt="pykep 3.0.0 documentation - Home"/>
+    <script>document.write(`<img src="../_static/pykep_logo.png" class="logo__image only-dark" alt="pykep 3.0.0 documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -209,9 +209,10 @@
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_mass.html">Low-thrust transfers via indirect methods I (mass-fixed time)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_mass.html">Low-thrust transfers via indirect methods I (mass, fixed time)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_time.html">Low-thrust transfers via indirect methods II (time)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pontryagin_equinoctial_mass.html">Low-thrust transfers via indirect methods I (mass-fixed time-equinoctial elements)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pontryagin_equinoctial_mass.html">Low-thrust transfers via indirect methods III (mass, fixed time, mee)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pontryagin_equinoctial_time.html">Low-thrust transfers via indirect methods IV (time, mean equinoctial elements)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primer_vector.html">Primer Vector</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Surrogate Primer Vector</a></li>
 
@@ -677,7 +678,7 @@ Larger then one! -&gt; Trajectory can be improved
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f38d3288c20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb94653d7f0&gt;
 </pre></div>
 </div>
 <img alt="../_images/4226f1a7f1fe98c07bdd04392b1aefed9b78b163fd264789620d702248a093d7.png" src="../_images/4226f1a7f1fe98c07bdd04392b1aefed9b78b163fd264789620d702248a093d7.png" />
@@ -772,7 +773,7 @@ Larger then one! -&gt; Trajectory can be improved
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Multi-start:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0.31053841179428937
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0.3105383981558039
 The best solution found has a DV of 3.10538e-01
 </pre></div>
 </div>
@@ -802,7 +803,7 @@ The best solution found has a DV of 3.10538e-01
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/108f20e20d6088882e9464674c997565323fb0cf685a3d629c5afb0193ffa955.png" src="../_images/108f20e20d6088882e9464674c997565323fb0cf685a3d629c5afb0193ffa955.png" />
+<img alt="../_images/232f59860eb07caa09a927b54a4f8a2f32c3e7d4eb7bf93a0a875f83fd5c1b51.png" src="../_images/232f59860eb07caa09a927b54a4f8a2f32c3e7d4eb7bf93a0a875f83fd5c1b51.png" />
 </div>
 </div>
 <p>The <strong>surrogate primer vector</strong> correctly had us try to add impulses and, in this case, halved the needed <span class="math notranslate nohighlight">\(\Delta V\)</span>!</p>

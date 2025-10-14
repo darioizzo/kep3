@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Low-thrust transfers via indirect methods I (mass-fixed time-equinoctial elements) &#8212; pykep 0.0.1 documentation</title>
+    <title>Low-thrust transfers via indirect methods III (mass, fixed time, mee) &#8212; pykep 3.0.0 documentation</title>
   
   
   
@@ -47,7 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/pontryagin_equinoctial_mass';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Primer Vector" href="primer_vector.html" />
+    <link rel="next" title="Low-thrust transfers via indirect methods IV (time, mean equinoctial elements)" href="pontryagin_equinoctial_time.html" />
     <link rel="prev" title="Low-thrust transfers via indirect methods II (time)" href="pontryagin_cartesian_time.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -140,8 +140,8 @@
       
     
     
-    <img src="../_static/pykep_logo.png" class="logo__image only-light" alt="pykep 0.0.1 documentation - Home"/>
-    <script>document.write(`<img src="../_static/pykep_logo.png" class="logo__image only-dark" alt="pykep 0.0.1 documentation - Home"/>`);</script>
+    <img src="../_static/pykep_logo.png" class="logo__image only-light" alt="pykep 3.0.0 documentation - Home"/>
+    <script>document.write(`<img src="../_static/pykep_logo.png" class="logo__image only-dark" alt="pykep 3.0.0 documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -210,9 +210,10 @@
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_mass.html">Low-thrust transfers via indirect methods I (mass-fixed time)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_mass.html">Low-thrust transfers via indirect methods I (mass, fixed time)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_time.html">Low-thrust transfers via indirect methods II (time)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Low-thrust transfers via indirect methods I (mass-fixed time-equinoctial elements)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Low-thrust transfers via indirect methods III (mass, fixed time, mee)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pontryagin_equinoctial_time.html">Low-thrust transfers via indirect methods IV (time, mean equinoctial elements)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primer_vector.html">Primer Vector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="surrogate_primer_vector.html">Surrogate Primer Vector</a></li>
 
@@ -434,7 +435,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Low-thrust transfers via indirect methods I (mass-fixed time-equinoctial elements)</h1>
+    <h1>Low-thrust transfers via indirect methods III (mass, fixed time, mee)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -458,8 +459,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="low-thrust-transfers-via-indirect-methods-i-mass-fixed-time-equinoctial-elements">
-<h1>Low-thrust transfers via indirect methods I (mass-fixed time-equinoctial elements)<a class="headerlink" href="#low-thrust-transfers-via-indirect-methods-i-mass-fixed-time-equinoctial-elements" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="low-thrust-transfers-via-indirect-methods-iii-mass-fixed-time-mee">
+<h1>Low-thrust transfers via indirect methods III (mass, fixed time, mee)<a class="headerlink" href="#low-thrust-transfers-via-indirect-methods-iii-mass-fixed-time-mee" title="Permalink to this heading">#</a></h1>
 <p>In this notebook we tackle the exact same fixed-time, mass optimal problem tackled using Cartesian coordinates in <a class="reference internal" href="pontryagin_cartesian_mass.html"><span class="std std-doc">a previous notebook</span></a>. As opposed to the previous notebook, we will use modified-equinoctial elements to describe the orbit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -886,15 +887,6 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 ******************************************************************************
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
@@ -904,7 +896,7 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
@@ -913,12 +905,21 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1259.9008822025069
-Hamiltonian at the final point is: [-0.03600518] 
+Final mass is: 1259.9008822050566
+Hamiltonian at the final point is: [-0.03600519] 
 
-Total time to success: 8.452 seconds
-Number of successes: 8 over 10 trials (80.0 %)
+Total time to success: 6.916 seconds
+Number of successes: 5 over 10 trials (50.0 %)
 </pre></div>
 </div>
 </div>
@@ -930,27 +931,36 @@ Number of successes: 8 over 10 trials (80.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xx
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.x
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.x
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.x
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1259.9008822076942
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.x
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+Final mass is: 1259.9008822036137
 Hamiltonian at the final point is: [-0.03600518] 
 
-Total time to success: 2.567 seconds
-Number of successes: 5 over 10 trials (50.0 %)
+Total time to success: 2.618 seconds
+Number of successes: 7 over 10 trials (70.0 %)
 </pre></div>
 </div>
 </div>
@@ -963,7 +973,7 @@ Number of successes: 5 over 10 trials (50.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6bb0a160a9f72af83fc9fa410068f973f252ee76964cc9b540647d3d13ae0e2b.png" src="../_images/6bb0a160a9f72af83fc9fa410068f973f252ee76964cc9b540647d3d13ae0e2b.png" />
+<img alt="../_images/cb1df62d77633f73c5e98a169c563fbb509e444038f2cfed869ec661c4bd46d1.png" src="../_images/cb1df62d77633f73c5e98a169c563fbb509e444038f2cfed869ec661c4bd46d1.png" />
 </div>
 </div>
 <p>Thrust arcs are indicated with a red color, ballistic with blue.</p>
@@ -974,7 +984,7 @@ Number of successes: 5 over 10 trials (50.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2b4ee8a9be5252f9b990bf5a5c2fbbe711a97673b681360bd6e171fd2acb5bd0.png" src="../_images/2b4ee8a9be5252f9b990bf5a5c2fbbe711a97673b681360bd6e171fd2acb5bd0.png" />
+<img alt="../_images/508fa9f3687db9a397538cdb98bf54089a6cd525f1ee680b6cf8f1b684a3607d.png" src="../_images/508fa9f3687db9a397538cdb98bf54089a6cd525f1ee680b6cf8f1b684a3607d.png" />
 </div>
 </div>
 </section>
@@ -1001,11 +1011,11 @@ Number of successes: 5 over 10 trials (50.0 %)
       </div>
     </a>
     <a class="right-next"
-       href="primer_vector.html"
+       href="pontryagin_equinoctial_time.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Primer Vector</p>
+        <p class="prev-next-title">Low-thrust transfers via indirect methods IV (time, mean equinoctial elements)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
