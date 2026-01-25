@@ -192,11 +192,8 @@
 <li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="approximations.html">Approximators for low-thrust transfers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sims_flanagan_leg.html">The Sims-Flanagan trajectory leg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sims_flanagan_hf_leg.html">The Sims-Flanagan high-fidelity trajectory leg</a></li>
-
-
-
+<li class="toctree-l2"><a class="reference internal" href="leg_sims_flanagan.html">The Sims-Flanagan trajectory leg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leg_zoh.html">The Zero Order Hold trajectory leg</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
@@ -206,6 +203,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="udp_point2point.html">Point to point low-thrust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl.html">Planet to planet low-thrust</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_alpha.html">Planet to planet low-thrust (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
@@ -880,7 +878,13 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
@@ -889,19 +893,13 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1049.433861185729
-Total time to success: 17.913 seconds
-Number of successes: 5 over 10 trials (50.0 %)
+Final mass is: 1049.4338611857297
+Total time to success: 21.134 seconds
+Number of successes: 7 over 10 trials (70.0 %)
 </pre></div>
 </div>
 </div>
@@ -925,25 +923,22 @@ Number of successes: 5 over 10 trials (50.0 %)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>..
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1049.4338612164684
-Total time to success: 4.125 seconds
-Number of successes: 10 over 10 trials (100.0 %)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+Final mass is: 1049.4338611841167
+Total time to success: 3.567 seconds
+Number of successes: 8 over 10 trials (80.0 %)
 </pre></div>
 </div>
 </div>
@@ -956,7 +951,7 @@ Number of successes: 10 over 10 trials (100.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8748a07037a7da422724e156801551679aa607a8eb50586db5cf1e01690b4b71.png" src="../_images/8748a07037a7da422724e156801551679aa607a8eb50586db5cf1e01690b4b71.png" />
+<img alt="../_images/866a398a8e121a037743a2661451080b2596632fa029d20e0df9e357fef55b72.png" src="../_images/866a398a8e121a037743a2661451080b2596632fa029d20e0df9e357fef55b72.png" />
 </div>
 </div>
 <p>Thrust arcs are indicated with a red color, ballistic with blue.</p>
@@ -967,7 +962,7 @@ Number of successes: 10 over 10 trials (100.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c26ac19d0d5b640fafd8d952dc0ae7ee9271f0f22ccaf25afbab1a05cad7e331.png" src="../_images/c26ac19d0d5b640fafd8d952dc0ae7ee9271f0f22ccaf25afbab1a05cad7e331.png" />
+<img alt="../_images/a9a32700f7e718ebae01e17bbdb98fd2515ec45c02ea6de5537f17b9eeb7bf6c.png" src="../_images/a9a32700f7e718ebae01e17bbdb98fd2515ec45c02ea6de5537f17b9eeb7bf6c.png" />
 </div>
 </div>
 </section>
