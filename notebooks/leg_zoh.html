@@ -47,7 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/leg_zoh';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Inspecting the CR3BP and BCP" href="cr3bp_bcp.html" />
+    <link rel="next" title="The Zero Order Hold - Solar Sail" href="leg_zoh_ss.html" />
     <link rel="prev" title="The Sims-Flanagan trajectory leg" href="leg_sims_flanagan.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -191,12 +191,14 @@
 <li class="toctree-l2"><a class="reference internal" href="planet.html">Ephemerides</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ta_cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="approximations.html">Approximators for low-thrust transfers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leg_sims_flanagan.html">The Sims-Flanagan trajectory leg</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">The Zero Order Hold trajectory leg</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leg_zoh_ss.html">The Zero Order Hold - Solar Sail</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting</a></li>
 </ul>
 </details></li>
@@ -586,7 +588,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5293742143070599e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.0047043910211102e-07
 </pre></div>
 </div>
 </div>
@@ -601,7 +603,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4039723710564261e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.8590909416366462e-08
 </pre></div>
 </div>
 </div>
@@ -616,7 +618,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0520072700512987e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.8134007303652782e-07
 </pre></div>
 </div>
 </div>
@@ -630,7 +632,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5813843654264162e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.1847674795174885e-08
 </pre></div>
 </div>
 </div>
@@ -644,7 +646,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0871203680148238e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7727907354122693e-08
 </pre></div>
 </div>
 </div>
@@ -669,7 +671,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/560a2558d929dfae027706eea819bbb5af30d6da43eb9d78b65bcb5b28c93c2c.png" src="../_images/560a2558d929dfae027706eea819bbb5af30d6da43eb9d78b65bcb5b28c93c2c.png" />
+<img alt="../_images/93acadf81f26a03e0d320b1c688dc22ade55c00a4ea46e0efe3fdaff7d8eb6f8.png" src="../_images/93acadf81f26a03e0d320b1c688dc22ade55c00a4ea46e0efe3fdaff7d8eb6f8.png" />
 </div>
 </div>
 </section>
@@ -830,7 +832,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-3.2899238888717264e-12, -7.310818617156656e-13, -1.247365828018736e-41, -5.060285523939001e-12, 7.049916206369744e-13, -7.56946397966658e-42, 0.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [4.020117572167692e-13, 1.8106627308611678e-12, -1.708182828011952e-42, -4.277050935641569e-12, 8.225642389447785e-12, -2.635877443856589e-41, 0.0]
 </pre></div>
 </div>
 </div>
@@ -856,7 +858,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b29b5d990018eedb797ca8748a8e0d2fa388a71e79dcea2c843aebb327e1b1c5.png" src="../_images/b29b5d990018eedb797ca8748a8e0d2fa388a71e79dcea2c843aebb327e1b1c5.png" />
+<img alt="../_images/669d19b09f062e48c37d689ef467f98862896e6aef409f28a15044384b139d01.png" src="../_images/669d19b09f062e48c37d689ef467f98862896e6aef409f28a15044384b139d01.png" />
 </div>
 </div>
 <p>YAY! … feels like we have achieved something ….
@@ -872,7 +874,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-0.06141219413584825, 0.014488100971538631, -1.5649026535198044e-31, 0.10064639713856263, 0.005303893495365974, -3.321844912211013e-32, -0.3831014343896689]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [0.2022859457159532, 0.10713427731868508, 6.38240209579151e-31, 0.20531298364309714, 0.02258809533490047, 1.9116314250815337e-31, -0.40708313686266107]
 </pre></div>
 </div>
 </div>
@@ -897,7 +899,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1efa832a5b8ac0348c76fa02f2356a830e65845c6c9bd2210a0ac6d488e5d3bf.png" src="../_images/1efa832a5b8ac0348c76fa02f2356a830e65845c6c9bd2210a0ac6d488e5d3bf.png" />
+<img alt="../_images/210295b996f5b581e499be74b2bb1bf64a4d19355d7ff5f5aca9908e46c5d165.png" src="../_images/210295b996f5b581e499be74b2bb1bf64a4d19355d7ff5f5aca9908e46c5d165.png" />
 </div>
 </div>
 <p>Makes sense ….</p>
@@ -924,11 +926,11 @@ Let see what happens if we add some non-zero controls …</p>
       </div>
     </a>
     <a class="right-next"
-       href="cr3bp_bcp.html"
+       href="leg_zoh_ss.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Inspecting the CR3BP and BCP</p>
+        <p class="prev-next-title">The Zero Order Hold - Solar Sail</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

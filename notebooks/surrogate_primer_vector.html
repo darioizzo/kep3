@@ -190,12 +190,14 @@
 <li class="toctree-l2"><a class="reference internal" href="planet.html">Ephemerides</a></li>
 <li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ta_cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="approximations.html">Approximators for low-thrust transfers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leg_sims_flanagan.html">The Sims-Flanagan trajectory leg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leg_zoh.html">The Zero Order Hold trajectory leg</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="leg_zoh_ss.html">The Zero Order Hold - Solar Sail</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting</a></li>
 </ul>
 </details></li>
@@ -676,7 +678,7 @@ Larger then one! -&gt; Trajectory can be improved
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f656cea9400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9aab6967b0&gt;
 </pre></div>
 </div>
 <img alt="../_images/c04d324e1afff12a114f9068b83d4996cb467179249107f8999b6cd2edc9e09d.png" src="../_images/c04d324e1afff12a114f9068b83d4996cb467179249107f8999b6cd2edc9e09d.png" />
@@ -771,8 +773,8 @@ Larger then one! -&gt; Trajectory can be improved
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Multi-start:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0.31053845232673655
-The best solution found has a DV of 3.10538e-01
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0.5877523351674933
+The best solution found has a DV of 5.87752e-01
 </pre></div>
 </div>
 </div>
@@ -801,7 +803,7 @@ The best solution found has a DV of 3.10538e-01
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/36cc35c3fedd52967213d13a98106f88e062a4514d2cc1c3066b90281667584b.png" src="../_images/36cc35c3fedd52967213d13a98106f88e062a4514d2cc1c3066b90281667584b.png" />
+<img alt="../_images/7abf5795815b7d03d269a77d53cbe08cec542a69af45817c2a33a9219d405bc1.png" src="../_images/7abf5795815b7d03d269a77d53cbe08cec542a69af45817c2a33a9219d405bc1.png" />
 </div>
 </div>
 <p>The <strong>surrogate primer vector</strong> correctly had us try to add impulses and, in this case, halved the needed <span class="math notranslate nohighlight">\(\Delta V\)</span>!</p>
