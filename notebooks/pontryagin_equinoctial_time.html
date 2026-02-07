@@ -188,7 +188,10 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tut_basic.html">Basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="anomalies.html">The various anomalies in pykep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="epochs.html">Epochs and Julian Dates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="planet.html">Ephemerides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planet.html">Planets and User Defined Planets (UDPLAs)</a></li>
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ta_cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
@@ -871,19 +874,10 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 ******************************************************************************
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
@@ -898,9 +892,18 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1049.43386118573
-Total time to success: 21.567 seconds
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+Final mass is: 1049.4338611857302
+Total time to success: 17.420 seconds
 Number of successes: 5 over 10 trials (50.0 %)
 </pre></div>
 </div>
@@ -916,18 +919,6 @@ Number of successes: 5 over 10 trials (50.0 %)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
@@ -941,8 +932,20 @@ Number of successes: 5 over 10 trials (50.0 %)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1049.4338611672645
-Total time to success: 3.779 seconds
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+Final mass is: 1049.4338611586322
+Total time to success: 3.543 seconds
 Number of successes: 7 over 10 trials (70.0 %)
 </pre></div>
 </div>
@@ -956,7 +959,7 @@ Number of successes: 7 over 10 trials (70.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8748a07037a7da422724e156801551679aa607a8eb50586db5cf1e01690b4b71.png" src="../_images/8748a07037a7da422724e156801551679aa607a8eb50586db5cf1e01690b4b71.png" />
+<img alt="../_images/ae63e8c65bf7c56fccdc80486f93ffb6c3138bd1fb79d678c7f7795d148fa6c3.png" src="../_images/ae63e8c65bf7c56fccdc80486f93ffb6c3138bd1fb79d678c7f7795d148fa6c3.png" />
 </div>
 </div>
 <p>Thrust arcs are indicated with a red color, ballistic with blue.</p>
@@ -967,7 +970,7 @@ Number of successes: 7 over 10 trials (70.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fa9d79108d4d7cf4f4f78ec4e11416db32dc53f78db748780a15aa2c4431bc45.png" src="../_images/fa9d79108d4d7cf4f4f78ec4e11416db32dc53f78db748780a15aa2c4431bc45.png" />
+<img alt="../_images/1f29114665b8c73e7871014a5f3ab267daae890d37c7103d5f999a481d7f8a3a.png" src="../_images/1f29114665b8c73e7871014a5f3ab267daae890d37c7103d5f999a481d7f8a3a.png" />
 </div>
 </div>
 </section>
