@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The Zero Order Hold trajectory leg &#8212; pykep 3.0.0 documentation</title>
   
@@ -29,8 +28,8 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -38,10 +37,10 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script src="../_static/documentation_options.js?v=6a41c08d"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/leg_zoh';</script>
@@ -194,6 +193,11 @@
 
 <li class="toctree-l2"><a class="reference internal" href="interface_to_spice.html">Interfacing to SPICE and JPL DE ephs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="propagate_lagrangian.html">Lagrange Propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ta_zoh_ss.html">Inspecting the Zero Hold simple sail dynamics</a></li>
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="ta_cr3bp_bcp.html">Inspecting the CR3BP and BCP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="approximations.html">Approximators for low-thrust transfers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="leg_sims_flanagan.html">The Sims-Flanagan trajectory leg</a></li>
@@ -464,7 +468,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-zero-order-hold-trajectory-leg">
-<h1>The Zero Order Hold trajectory leg<a class="headerlink" href="#the-zero-order-hold-trajectory-leg" title="Permalink to this heading">#</a></h1>
+<h1>The Zero Order Hold trajectory leg<a class="headerlink" href="#the-zero-order-hold-trajectory-leg" title="Link to this heading">#</a></h1>
 <p>The Zero Order Hold (ZOH) trajectory leg is implemented in <code class="docutils literal notranslate"><span class="pre">pykep</span></code> in the class <a class="reference internal" href="../leg.html#pykep.leg.zoh" title="pykep.leg.zoh"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.leg.zoh</span></code></a>. Extending the class <a class="reference internal" href="../leg.html#pykep.leg.sims_flanagan" title="pykep.leg.sims_flanagan"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.leg.sims_flanagan</span></code></a>, this leg accounts for a continuous thrust considered fixed in some frame along each segment of predefined length, as well as for a generic dynamics and variable segment lengths.</p>
 <p>Thus, it approximates a thrust strategy via a sequence of continuous, constant thrust arcs (zero order hold). The leg is defined by a starting state <span class="math notranslate nohighlight">\(\mathbf x_0 = [\mathbf r_0, \mathbf v_0, m_0]\)</span>, a final state <span class="math notranslate nohighlight">\(\mathbf x_1 = [\mathbf r_1, \mathbf v_1, m_1]\)</span> and a time grid defining the various segment lengths.</p>
 <p>A sequence of controls <span class="math notranslate nohighlight">\(\mathbf u = [T_0, i_{x0}, i_{y0}, i_{z0}, T_1, i_{x1}, i_{y1}, i_{z1}, T_2, i_{x2}, i_{y2}, i_{z2}, ... ]\)</span> define the magnitude and direction of the continuous thrust vector along each segment.</p>
@@ -509,7 +513,7 @@ document.write(`
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="test-the-zero-hold-leg">
-<h1>1 - Test the zero hold leg<a class="headerlink" href="#test-the-zero-hold-leg" title="Permalink to this heading">#</a></h1>
+<h1>1 - Test the zero hold leg<a class="headerlink" href="#test-the-zero-hold-leg" title="Link to this heading">#</a></h1>
 <p>We compute the gradient of the mismatch and throttle constraints numerically and using the analytical ones provided by <a class="reference internal" href="../leg.html#pykep.leg.zoh" title="pykep.leg.zoh"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.leg.zoh</span></code></a>. We check that they are indeed the same,
 and in the process we learn how to instantiate and use the class.</p>
 <p>We need a small helper to get the numerical gradients easily:</p>
@@ -591,7 +595,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.7221524190813928e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.4008590787977696e-08
 </pre></div>
 </div>
 </div>
@@ -606,7 +610,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.6651474234749789e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.4709644304747539e-07
 </pre></div>
 </div>
 </div>
@@ -621,7 +625,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.7059444549666681e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.6845353579041149e-07
 </pre></div>
 </div>
 </div>
@@ -635,7 +639,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0166799859221242e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.2246754441837967e-08
 </pre></div>
 </div>
 </div>
@@ -649,7 +653,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.4295765583178769e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.5107722480853477e-08
 </pre></div>
 </div>
 </div>
@@ -674,12 +678,12 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a656a0280f76298a04becaa39c92afd78c4635e4a84797a16e05f16cd032b25d.png" src="../_images/a656a0280f76298a04becaa39c92afd78c4635e4a84797a16e05f16cd032b25d.png" />
+<img alt="../_images/332cc8e7a8737af966005aa531bb0397d09fb0c01730da5b719d1f8e8552f069.png" src="../_images/332cc8e7a8737af966005aa531bb0397d09fb0c01730da5b719d1f8e8552f069.png" />
 </div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="use-with-arbitrary-dynamics">
-<h1>2 - Use with arbitrary dynamics<a class="headerlink" href="#use-with-arbitrary-dynamics" title="Permalink to this heading">#</a></h1>
+<h1>2 - Use with arbitrary dynamics<a class="headerlink" href="#use-with-arbitrary-dynamics" title="Link to this heading">#</a></h1>
 <p>One of the very, and I mean very, cool things in <a class="reference internal" href="../leg.html#pykep.leg.zoh" title="pykep.leg.zoh"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.leg.zoh</span></code></a> is the possibility to use arbitrary dynamics. One can then have a leg in the CR3BP, as well as the equinoctial parameter dynamics for Keplerian motion, or a full ephemerides model of N-Body dynamics, and so on…..</p>
 <p>The requirements for a dynamics to be usable in <a class="reference internal" href="../leg.html#pykep.leg.zoh" title="pykep.leg.zoh"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.leg.zoh</span></code></a> are:</p>
 <ul class="simple">
@@ -835,7 +839,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [4.807876319290472e-12, 7.357447984190912e-12, -5.689271765158757e-42, 4.924727292632269e-12, 8.065104140086987e-12, -3.2294149246521694e-41, 0.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-9.348077867343818e-13, 6.690203946391193e-13, -7.230700075916056e-43, 5.779821066198565e-13, -7.575051697017443e-13, -4.686642713934351e-42, 0.0]
 </pre></div>
 </div>
 </div>
@@ -861,7 +865,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d3695a93385482cf70a03fea763cef1e88b558869dfc93e703df54730efa885d.png" src="../_images/d3695a93385482cf70a03fea763cef1e88b558869dfc93e703df54730efa885d.png" />
+<img alt="../_images/e2b34f0e0c2f5ff8a22a1eb9ffe763c3570bb2a50132ddc621e269815f99c569.png" src="../_images/e2b34f0e0c2f5ff8a22a1eb9ffe763c3570bb2a50132ddc621e269815f99c569.png" />
 </div>
 </div>
 <p>YAY! … feels like we have achieved something ….
@@ -877,7 +881,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [0.28142212506650083, 0.09706527360773864, 6.842732700650791e-31, 0.2251511703374237, -0.08819109351314214, 3.6313363846563307e-32, -0.4368106463484883]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-0.05633029808114742, -0.1448152530162825, -1.5505451482142508e-31, -0.1599249581838449, 0.12051605823517786, 5.854798186886127e-32, -0.45611992972209714]
 </pre></div>
 </div>
 </div>
@@ -902,7 +906,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/882c10120178da98f71490499fbc46a48f402c2a58525f7508d074c39b48fff7.png" src="../_images/882c10120178da98f71490499fbc46a48f402c2a58525f7508d074c39b48fff7.png" />
+<img alt="../_images/a141e4b6687cb6a653f9175e73ba93199dfdfb1e0676e0bc5f7973c6cfe0fa4d.png" src="../_images/a141e4b6687cb6a653f9175e73ba93199dfdfb1e0676e0bc5f7973c6cfe0fa4d.png" />
 </div>
 </div>
 <p>Makes sense ….</p>
