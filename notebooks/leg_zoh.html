@@ -212,7 +212,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="udp_point2point.html">Point to point low-thrust</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Point to point Sims-FLanagan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Point-to-Point Zero Order Hold</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl.html">Planet to planet low-thrust</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_alpha.html">Planet to planet low-thrust (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
@@ -597,7 +601,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4471274943136272e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.2230991633317648e-07
 </pre></div>
 </div>
 </div>
@@ -612,7 +616,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4308298485320073e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0180849228211867e-08
 </pre></div>
 </div>
 </div>
@@ -627,7 +631,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.6499033427049239e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.5170395638970958e-07
 </pre></div>
 </div>
 </div>
@@ -641,7 +645,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0101332549713576e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.7476510197490266e-08
 </pre></div>
 </div>
 </div>
@@ -655,7 +659,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.4814055565020929e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.2277258416269447e-08
 </pre></div>
 </div>
 </div>
@@ -680,7 +684,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/26f76e686d158bdf157b38a4957b96b03c499cf66ef08d707508b8c0093d14ac.png" src="../_images/26f76e686d158bdf157b38a4957b96b03c499cf66ef08d707508b8c0093d14ac.png" />
+<img alt="../_images/d824d740824f84cfad65f49dcb8c4763e13f55fda3939b8a53d4af2bcafcddd9.png" src="../_images/d824d740824f84cfad65f49dcb8c4763e13f55fda3939b8a53d4af2bcafcddd9.png" />
 </div>
 </div>
 </section>
@@ -841,7 +845,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-2.7567947924467262e-12, 1.0791367799356522e-12, -6.285524261728967e-42, -4.61605753621086e-12, -4.1597836286655365e-12, -1.9664071025254077e-41, 0.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [5.231537425487431e-12, 5.625944154985518e-12, 1.3469981488322304e-42, 2.174593838333294e-12, 6.175504552174971e-12, -2.864464255849575e-41, 0.0]
 </pre></div>
 </div>
 </div>
@@ -867,7 +871,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d6b104b8e481538afeb7b93d9047c8763880abddc06965e64b0db0d134fb2a43.png" src="../_images/d6b104b8e481538afeb7b93d9047c8763880abddc06965e64b0db0d134fb2a43.png" />
+<img alt="../_images/57f4e2224dc820ca88f096f0777dc20e53170e872535bb4ba8020c3fc1dc1e62.png" src="../_images/57f4e2224dc820ca88f096f0777dc20e53170e872535bb4ba8020c3fc1dc1e62.png" />
 </div>
 </div>
 <p>YAY! … feels like we have achieved something ….
@@ -883,7 +887,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-0.07153390616974853, 0.011796731060913723, -1.5019588111936441e-31, 0.0967908631272485, 0.03690216836387239, -3.4452083428962876e-32, -0.4562874033708967]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [0.24491241742901873, 0.10735360663566595, 6.732820993743832e-31, 0.2212709027798787, -0.03726221163839749, 1.0157453825979174e-31, -0.4371866996127277]
 </pre></div>
 </div>
 </div>
@@ -908,7 +912,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d21435337f4a4276fdf3f6514c5efb408bacb31a75d306a8cc010989acf88624.png" src="../_images/d21435337f4a4276fdf3f6514c5efb408bacb31a75d306a8cc010989acf88624.png" />
+<img alt="../_images/0008d80e418b9a65b1e71aebfa80edd59d4239f3bff2648417ffd9a86502ecba.png" src="../_images/0008d80e418b9a65b1e71aebfa80edd59d4239f3bff2648417ffd9a86502ecba.png" />
 </div>
 </div>
 <p>Makes sense ….</p>

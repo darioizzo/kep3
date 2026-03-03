@@ -26,7 +26,9 @@ Trajectory Optimization
 .. toctree::
   :maxdepth: 1
 
-  notebooks/udp_point2point
+  notebooks/udp_sf_point2point
+  notebooks/udp_zoh_point2point
+  notebooks/udp_zoh_pl2pl
   notebooks/udp_pl2pl
   notebooks/udp_pl2pl_alpha
   notebooks/udp_mga
