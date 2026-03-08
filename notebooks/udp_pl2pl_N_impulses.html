@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Multiple impulses &#8212; pykep 3.0.0 documentation</title>
+    <title>Multiple impulses: planet to planet transfer &#8212; pykep 3.0.0 documentation</title>
   
   
   
@@ -212,16 +212,16 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Point to point Sims-FLanagan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Planet to planet Sims-Flanagan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl_alpha.html">Planet to planet Sims-Flanagan (with Alpha encoding)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Point to Point Zero Order Hold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Sims-Flanagan: point to point low-thrust transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Sims-Flanagan: planet to plane low-thrust transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl_alpha.html">Sims-Flanagan: planet to plane low-thrust transfer (with Alpha encoding)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Zero Order Hold: point to point low thrust transfer</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero Order Hold: planet to planet low thrust transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Multiple impulses</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Multiple impulses: planet to planet transfer</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_mass.html">Low-thrust transfers via indirect methods I (mass, fixed time)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_time.html">Low-thrust transfers via indirect methods II (time)</a></li>
@@ -448,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Multiple impulses</h1>
+    <h1>Multiple impulses: planet to planet transfer</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -458,7 +458,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Multiple impulses</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Multiple impulses: planet to planet transfer</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#are-more-impulses-needed">Are more impulses needed?</a></li>
 </ul>
 
@@ -472,8 +472,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="multiple-impulses">
-<h1>Multiple impulses<a class="headerlink" href="#multiple-impulses" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="multiple-impulses-planet-to-planet-transfer">
+<h1>Multiple impulses: planet to planet transfer<a class="headerlink" href="#multiple-impulses-planet-to-planet-transfer" title="Link to this heading">#</a></h1>
 <p>In this tutorial, we use the <a class="reference internal" href="../trajopt.html#pykep.trajopt.pl2pl_N_impulses" title="pykep.trajopt.pl2pl_N_impulses"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.trajopt.pl2pl_N_impulses</span></code></a> to study a single direct transfer between planets.</p>
 <p>The encoding is original with <code class="docutils literal notranslate"><span class="pre">pykep</span></code> and makes use of a decision vector (chromosome) in the form:</p>
 <div class="math notranslate nohighlight">
@@ -548,32 +548,32 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Multi-start:
-0 6015.33207587
-1 5986.38945859
-2 5986.38945877
-3 6015.33207581
-4 6015.33207581
+0 5986.3894607
+1 5986.38946011
+2 5986.38946325
+3 6015.3320758
+4 6015.3320758
+5 5986.38946062
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 6015.3320758
-6 5986.38945973
-7 5986.38945962
-8 6312.58212984
-9 5986.38945989
-10 6015.3320758
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6 5986.38945996
+7 5986.38945644
+8 5986.38945955
+9 5986.38945805
+10 6015.33207581
+11 6015.3320758
+12 6015.3320758
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11 5986.38946245
-12 5986.3894592
-13 6312.58212984
-14 6161.37476087
-15 5986.38945675
-16 5986.38946408
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13 6015.3320758
+14 6312.58212984
+15 6161.29381793
+16 6015.3320758
+17 5986.38946045
+18 5986.38945798
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17 6312.58212984
-18 5986.38946013
-19 5986.38945891
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19 6015.3320758
 The best solution found has a DV of 5.98639e+00 km/s
 </pre></div>
 </div>
@@ -617,7 +617,7 @@ The best solution found has a DV of 5.98639e+00 km/s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3ab96235483d69b0f11b3c2f9dd14e0f2275016f08a9556941cad16a2f100f80.png" src="../_images/3ab96235483d69b0f11b3c2f9dd14e0f2275016f08a9556941cad16a2f100f80.png" />
+<img alt="../_images/1fd7c1f3f56aa1f23329aac5836310480cf62e8b11fcc9a2155468313d0ddeba.png" src="../_images/1fd7c1f3f56aa1f23329aac5836310480cf62e8b11fcc9a2155468313d0ddeba.png" />
 </div>
 </div>
 <p>… and quickly investigate a human readable format for the solution found.</p>
@@ -628,10 +628,10 @@ The best solution found has a DV of 5.98639e+00 km/s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total DV (m/s):  5986.389456754831
-Dvs (m/s):  [219.51277363867376, 2899.325378968767, 2867.5513041473905]
-Total DT (m/s):  31103999.999999996
-Tofs (days):  [17793468.375302464, 13310531.624697533]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total DV (m/s):  5986.389456440693
+Dvs (m/s):  [219.51894443920577, 2899.324285427817, 2867.54622657367]
+Total DT (m/s):  31104000.0
+Tofs (days):  [17793492.897627696, 13310507.102372305]
 </pre></div>
 </div>
 </div>
@@ -647,7 +647,7 @@ Tofs (days):  [17793468.375302464, 13310531.624697533]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/382c7d36d73c0e7d9915f2d3c8fdbce6402c839060b4ba33c117ada20f8f4fc6.png" src="../_images/382c7d36d73c0e7d9915f2d3c8fdbce6402c839060b4ba33c117ada20f8f4fc6.png" />
+<img alt="../_images/e5f110fb3fe35222f95f55ba4b3818db924407a2a741f8ef093bb2d2db2f7093.png" src="../_images/e5f110fb3fe35222f95f55ba4b3818db924407a2a741f8ef093bb2d2db2f7093.png" />
 </div>
 </div>
 <p>… the primer vector goes above one this trajevtory IS NOT OPTIMAL. We need more impulses. Lets add one.</p>
@@ -677,47 +677,45 @@ Tofs (days):  [17793468.375302464, 13310531.624697533]
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Multi-start:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 5986.38945627
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 6015.33207583
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 5938.64538916
-2 5986.38945625
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 5986.44294844
+2 6015.33207587
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 5986.38945628
-4 5986.38945626
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 6015.33207599
+4 6015.33207584
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 5986.44416744
-6 5986.38945631
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 5986.38945635
+6 5986.38945634
+7 6015.33207601
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7 5977.18027805
-8 6015.33207585
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8 6015.42721217
+9 6312.58212984
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9 5986.38945626
-10 5986.38945626
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 5937.92739836
+11 6015.33207581
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11 6015.33207587
-12 6015.33207584
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12 5977.03832505
+13 6015.33207584
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13 5986.38945626
-14 6015.33207585
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14 5986.38945626
+15 5986.38945626
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15 6015.33207583
-16 5986.38945625
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16 5986.38945625
+17 6015.33207586
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17 5986.38945625
-18 5986.38945628
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19 5980.12401357
-The best solution found has a DV of 5.93865e+00 km/s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18 5986.41593336
+19 6015.33207581
+The best solution found has a DV of 5.93793e+00 km/s
 </pre></div>
 </div>
 </div>
@@ -729,7 +727,7 @@ The best solution found has a DV of 5.93865e+00 km/s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7749a895c08d997f6aad348088e010efab7186dfeb0befb03591dfeab81bda72.png" src="../_images/7749a895c08d997f6aad348088e010efab7186dfeb0befb03591dfeab81bda72.png" />
+<img alt="../_images/4233e06c93658e5d6b81412fd45e97a7b8cbfd7de2b53d4980517c78d52335a0.png" src="../_images/4233e06c93658e5d6b81412fd45e97a7b8cbfd7de2b53d4980517c78d52335a0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -739,10 +737,10 @@ The best solution found has a DV of 5.93865e+00 km/s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total DV (m/s):  5938.6453891615165
-Dvs (m/s):  [191.69631445846494, 2748.6201017473645, 215.99060570904203, 2782.338367246645]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total DV (m/s):  5937.927398362252
+Dvs (m/s):  [197.6360411302737, 2732.328583493387, 230.9870393905242, 2776.975734348067]
 Total DT (m/s):  31104000.0
-Tofs (days):  [18090526.435567055, 8918213.01068748, 4095260.5537454654]
+Tofs (days):  [18115087.428569008, 8856990.559841217, 4131922.0115897735]
 </pre></div>
 </div>
 </div>
@@ -757,7 +755,7 @@ Tofs (days):  [18090526.435567055, 8918213.01068748, 4095260.5537454654]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/498412cb864d73c838fb304a4110cbcc20cae4c67997269117d633bfd1a8b2c1.png" src="../_images/498412cb864d73c838fb304a4110cbcc20cae4c67997269117d633bfd1a8b2c1.png" />
+<img alt="../_images/58f35284f866773b1908278ac63f6ba9e768a4c81c1130b7afa6da4be6ee6b8f.png" src="../_images/58f35284f866773b1908278ac63f6ba9e768a4c81c1130b7afa6da4be6ee6b8f.png" />
 </div>
 </div>
 <p>The very same trajectory is also studied in <a class="reference internal" href="primer_vector.html"><span class="std std-doc">the notebook dedicated to the primer vector</span></a> where the whole theory is also developed and coded as to show its inner workings.</p>
@@ -808,7 +806,7 @@ Tofs (days):  [18090526.435567055, 8918213.01068748, 4095260.5537454654]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Multiple impulses</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Multiple impulses: planet to planet transfer</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#are-more-impulses-needed">Are more impulses needed?</a></li>
 </ul>
 

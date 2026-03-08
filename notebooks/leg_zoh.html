@@ -212,16 +212,16 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Point to point Sims-FLanagan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Planet to planet Sims-Flanagan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl_alpha.html">Planet to planet Sims-Flanagan (with Alpha encoding)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Point to Point Zero Order Hold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Sims-Flanagan: point to point low-thrust transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Sims-Flanagan: planet to plane low-thrust transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl_alpha.html">Sims-Flanagan: planet to plane low-thrust transfer (with Alpha encoding)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Zero Order Hold: point to point low thrust transfer</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero Order Hold: planet to planet low thrust transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses: planet to planet transfer</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_mass.html">Low-thrust transfers via indirect methods I (mass, fixed time)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pontryagin_cartesian_time.html">Low-thrust transfers via indirect methods II (time)</a></li>
@@ -601,7 +601,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9301189985879269e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0078441920502844e-08
 </pre></div>
 </div>
 </div>
@@ -616,7 +616,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1407834126127663e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.4456756056902853e-07
 </pre></div>
 </div>
 </div>
@@ -631,7 +631,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1330184230525953e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.3348239646526264e-07
 </pre></div>
 </div>
 </div>
@@ -645,7 +645,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.8630357765787469e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.2836674781731115e-08
 </pre></div>
 </div>
 </div>
@@ -659,7 +659,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.491812212048881e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.4323613415063858e-08
 </pre></div>
 </div>
 </div>
@@ -684,7 +684,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ecc7b4035ad5a4a921ce669dfa2fc82f0898b23cd62f48e311c70da6be46b91f.png" src="../_images/ecc7b4035ad5a4a921ce669dfa2fc82f0898b23cd62f48e311c70da6be46b91f.png" />
+<img alt="../_images/58e9834d197c91589a6bcd36cfeb724713b923dcbd36bf84e877a040897e256f.png" src="../_images/58e9834d197c91589a6bcd36cfeb724713b923dcbd36bf84e877a040897e256f.png" />
 </div>
 </div>
 </section>
@@ -845,7 +845,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-4.675815290511309e-12, 5.287992266289621e-13, -7.81083764014653e-42, -5.4801441162766196e-12, -3.388400671155978e-13, -1.6878640002792422e-41, 0.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [4.927169783286445e-12, -1.2136958105202211e-12, -1.1688931140165462e-41, -3.984368390774762e-12, -3.2219782397646668e-12, 6.919086329911825e-42, 0.0]
 </pre></div>
 </div>
 </div>
@@ -871,7 +871,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b53c76c02588058f7aa661653e3697259f7e0520678b7c2d19ab7758d7e17df3.png" src="../_images/b53c76c02588058f7aa661653e3697259f7e0520678b7c2d19ab7758d7e17df3.png" />
+<img alt="../_images/57cee60090e541e365204e8a43fbaf8c15ecf3fa65a99e7ea47d0ce26ee776e1.png" src="../_images/57cee60090e541e365204e8a43fbaf8c15ecf3fa65a99e7ea47d0ce26ee776e1.png" />
 </div>
 </div>
 <p>YAY! … feels like we have achieved something ….
@@ -887,7 +887,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-0.07081984576905154, 0.008868509607565023, -1.4016883249386185e-31, 0.09437272606082948, 0.04928193237931566, -3.173412831987013e-32, -0.7506682002773091]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-0.022180600474982937, -0.15609193795941523, -1.5871529691913796e-31, -0.19111231439304732, 0.07719217654686106, 7.171977367402692e-32, -0.6597661180964034]
 </pre></div>
 </div>
 </div>
@@ -912,7 +912,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a14b9be1099082ef778e90c9adc442b147a92c97861eeed504e547c897672444.png" src="../_images/a14b9be1099082ef778e90c9adc442b147a92c97861eeed504e547c897672444.png" />
+<img alt="../_images/b9054f05f37bab831b6899bfb620413ff8e507a0ea5bd196f219312d06aa53aa.png" src="../_images/b9054f05f37bab831b6899bfb620413ff8e507a0ea5bd196f219312d06aa53aa.png" />
 </div>
 </div>
 <p>Makes sense ….</p>
