@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Planet to planet low-thrust (with Alpha encoding) &#8212; pykep 3.0.0 documentation</title>
+    <title>Planet to planet Sims-Flanagan (with Alpha encoding) &#8212; pykep 3.0.0 documentation</title>
   
   
   
@@ -43,11 +43,11 @@
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/udp_pl2pl_alpha';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/udp_sf_pl2pl_alpha';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Multiple Gravity Assist (MGA)" href="udp_mga.html" />
-    <link rel="prev" title="Zero-Order Hold Planet-to-Planet Low-Thrust Transfer" href="udp_zoh_pl2pl.html" />
+    <link rel="next" title="Point to Point Zero Order Hold" href="udp_zoh_point2point.html" />
+    <link rel="prev" title="Planet to planet Sims-Flanagan" href="udp_sf_pl2pl.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -213,11 +213,12 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Point to point Sims-FLanagan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Planet to planet Sims-Flanagan</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Planet to planet Sims-Flanagan (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Point to Point Zero Order Hold</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Planet to planet low-thrust (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
@@ -285,7 +286,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/esa/kep3/main?urlpath=lab/tree/doc/notebooks/udp_pl2pl_alpha.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/esa/kep3/main?urlpath=lab/tree/doc/notebooks/udp_sf_pl2pl_alpha.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +334,7 @@
       
       
       
-      <li><a href="https://github.com/esa/kep3/issues/new?title=Issue%20on%20page%20%2Fnotebooks/udp_pl2pl_alpha.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/esa/kep3/issues/new?title=Issue%20on%20page%20%2Fnotebooks/udp_sf_pl2pl_alpha.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +364,7 @@
       
       
       
-      <li><a href="../_sources/notebooks/udp_pl2pl_alpha.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/udp_sf_pl2pl_alpha.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -447,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Planet to planet low-thrust (with Alpha encoding)</h1>
+    <h1>Planet to planet Sims-Flanagan (with Alpha encoding)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,10 +470,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="planet-to-planet-low-thrust-with-alpha-encoding">
-<h1>Planet to planet low-thrust (with Alpha encoding)<a class="headerlink" href="#planet-to-planet-low-thrust-with-alpha-encoding" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="planet-to-planet-sims-flanagan-with-alpha-encoding">
+<h1>Planet to planet Sims-Flanagan (with Alpha encoding)<a class="headerlink" href="#planet-to-planet-sims-flanagan-with-alpha-encoding" title="Link to this heading">#</a></h1>
 <p>In this tutorial we show the use of the <a class="reference internal" href="../trajopt.html#pykep.trajopt.sf_pl2pl_alpha" title="pykep.trajopt.sf_pl2pl_alpha"><code class="xref py py-class docutils literal notranslate"><span class="pre">pykep.trajopt.sf_pl2pl_alpha</span></code></a> to find a low-thrust (multiple impulses) trajectory connecting two moving planets.
-Unlike in <code class="docutils literal notranslate"><span class="pre">pykep.trajopt.sf_pl2pl</span></code>, where the impulses are equally spaced, here we use the alpha encoding to move the spacing of the impulses. The impulse is placed at the centre of a time-interval.</p>
+Unlike in the <a class="reference internal" href="udp_sf_pl2pl.html"><span class="std std-doc">previous tutorial</span></a>, where all segments have the same duration, here we use what we call alpha encoding to unlock uneven
+spacing between impulses. The impulse is still placed at the centre of each (non-uniform) time-interval.</p>
 <p>The decision vector for this class, compatible with pygmo <span id="id1">[<a class="reference internal" href="../bibliography.html#id9" title="Francesco Biscani and Dario Izzo. A parallel global multiobjective framework for optimization: pagmo. Journal of Open Source Software, 5(53):2338, 2020.">BI20</a>]</span> UDPs (User Defined Problems), is:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -582,40 +584,6 @@ Unlike in <code class="docutils literal notranslate"><span class="pre">pykep.tra
         <span class="n">v_scaling</span><span class="o">=</span><span class="n">pk</span><span class="o">.</span><span class="n">EARTH_VELOCITY</span><span class="p">,</span>
         <span class="n">high_fidelity</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">udp_lf</span> <span class="o">=</span> <span class="n">pk</span><span class="o">.</span><span class="n">trajopt</span><span class="o">.</span><span class="n">sf_pl2pl</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>         <span class="n">pls</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="n">plf</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="n">ms</span><span class="o">=</span><span class="n">ms</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="n">max_thrust</span><span class="o">=</span><span class="n">max_thrust</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">veff</span><span class="o">=</span><span class="n">veff</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">t0_bounds</span><span class="o">=</span><span class="p">[</span><span class="n">t0_lb</span><span class="p">,</span> <span class="n">t0_ub</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">tof_bounds</span><span class="o">=</span><span class="p">[</span><span class="n">tof_lb</span><span class="p">,</span><span class="n">tof</span><span class="p">],</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="n">mf_bounds</span><span class="o">=</span><span class="p">[</span><span class="n">ms</span><span class="o">*</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">ms</span><span class="p">],</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">vinfs</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">vinff</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">nseg</span><span class="o">=</span><span class="n">nseg</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">cut</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">mass_scaling</span><span class="o">=</span><span class="n">ms</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>         <span class="n">r_scaling</span><span class="o">=</span><span class="n">pk</span><span class="o">.</span><span class="n">AU</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>         <span class="n">v_scaling</span><span class="o">=</span><span class="n">pk</span><span class="o">.</span><span class="n">EARTH_VELOCITY</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="n">with_gradient</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="n">high_fidelity</span><span class="o">=</span><span class="kc">False</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">udp_alpha</span> <span class="o">=</span> <span class="n">pk</span><span class="o">.</span><span class="n">trajopt</span><span class="o">.</span><span class="n">sf_pl2pl_alpha</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="n">pls</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>         <span class="n">plf</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>     <span class="mi">39</span>         <span class="n">high_fidelity</span><span class="o">=</span><span class="kc">False</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="p">)</span>
-
-<span class="ne">TypeError</span>: sf_pl2pl.__init__() got an unexpected keyword argument &#39;high_fidelity&#39;
 </pre></div>
 </div>
 </div>
@@ -760,17 +728,6 @@ talphas:  [0.22955978304251273, 0.2945385348444719, 0.3807213456904122, 0.095180
 <p>And we plot the trajectory found:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># udp_lf.pretty(xs_lf[best_idx_lf])</span>
-
-<span class="c1"># udp_hf.pretty(xs_hf[best_idx_hf])</span>
-
-<span class="c1"># udp_alpha.pretty(xs_alpha[best_idx_alpha])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot with low-fidelity</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">udp_lf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs_lf</span><span class="p">[</span><span class="n">best_idx_lf</span><span class="p">],</span> <span class="n">show_gridpoints</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_throttles</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -806,20 +763,20 @@ talphas:  [0.22955978304251273, 0.2945385348444719, 0.3807213456904122, 0.095180
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="udp_zoh_pl2pl.html"
+       href="udp_sf_pl2pl.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</p>
+        <p class="prev-next-title">Planet to planet Sims-Flanagan</p>
       </div>
     </a>
     <a class="right-next"
-       href="udp_mga.html"
+       href="udp_zoh_point2point.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Multiple Gravity Assist (MGA)</p>
+        <p class="prev-next-title">Point to Point Zero Order Hold</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

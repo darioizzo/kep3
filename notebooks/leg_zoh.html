@@ -213,11 +213,12 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Point to point Sims-FLanagan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Planet to planet Sims-Flanagan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl_alpha.html">Planet to planet Sims-Flanagan (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Point to Point Zero Order Hold</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_alpha.html">Planet to planet low-thrust (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
@@ -600,7 +601,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.8173140195980884e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.9301189985879269e-07
 </pre></div>
 </div>
 </div>
@@ -615,7 +616,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.5601391458738167e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.1407834126127663e-07
 </pre></div>
 </div>
 </div>
@@ -630,7 +631,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.937138118088829e-07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1330184230525953e-07
 </pre></div>
 </div>
 </div>
@@ -644,7 +645,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0707634263733841e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.8630357765787469e-08
 </pre></div>
 </div>
 </div>
@@ -658,7 +659,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.2100503772181739e-08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.491812212048881e-08
 </pre></div>
 </div>
 </div>
@@ -683,7 +684,7 @@ and in the process we learn how to instantiate and use the class.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/51b38ee8fb32c73ff13e77ed398997fb29c050c9743628e39b6c383b4ded3a04.png" src="../_images/51b38ee8fb32c73ff13e77ed398997fb29c050c9743628e39b6c383b4ded3a04.png" />
+<img alt="../_images/ecc7b4035ad5a4a921ce669dfa2fc82f0898b23cd62f48e311c70da6be46b91f.png" src="../_images/ecc7b4035ad5a4a921ce669dfa2fc82f0898b23cd62f48e311c70da6be46b91f.png" />
 </div>
 </div>
 </section>
@@ -844,7 +845,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [8.125167205719208e-12, -1.2324585796363863e-12, 1.79018506252116e-41, -1.312461250790875e-11, 2.7036595184881662e-11, -2.8404319871864042e-42, 0.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-4.675815290511309e-12, 5.287992266289621e-13, -7.81083764014653e-42, -5.4801441162766196e-12, -3.388400671155978e-13, -1.6878640002792422e-41, 0.0]
 </pre></div>
 </div>
 </div>
@@ -870,7 +871,7 @@ be readily used.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/17f43e8295c91c288736e6b3a4d10bec7ea5b933acd9cb1764a1c82b4dd3414c.png" src="../_images/17f43e8295c91c288736e6b3a4d10bec7ea5b933acd9cb1764a1c82b4dd3414c.png" />
+<img alt="../_images/b53c76c02588058f7aa661653e3697259f7e0520678b7c2d19ab7758d7e17df3.png" src="../_images/b53c76c02588058f7aa661653e3697259f7e0520678b7c2d19ab7758d7e17df3.png" />
 </div>
 </div>
 <p>YAY! … feels like we have achieved something ….
@@ -886,7 +887,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [0.10750407337289711, 0.03069675298935476, 3.9207873883418637e-31, 0.19806337851873357, 0.37499491373609173, 1.2483813390922098e-30, -0.608208761683756]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mismatch constraints are:  [-0.07081984576905154, 0.008868509607565023, -1.4016883249386185e-31, 0.09437272606082948, 0.04928193237931566, -3.173412831987013e-32, -0.7506682002773091]
 </pre></div>
 </div>
 </div>
@@ -911,7 +912,7 @@ Let see what happens if we add some non-zero controls …</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d9798c546e8968331537883278bb87d691222b42d19efcdb3323f5dbc7965014.png" src="../_images/d9798c546e8968331537883278bb87d691222b42d19efcdb3323f5dbc7965014.png" />
+<img alt="../_images/a14b9be1099082ef778e90c9adc442b147a92c97861eeed504e547c897672444.png" src="../_images/a14b9be1099082ef778e90c9adc442b147a92c97861eeed504e547c897672444.png" />
 </div>
 </div>
 <p>Makes sense ….</p>

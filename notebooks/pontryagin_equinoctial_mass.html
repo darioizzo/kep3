@@ -213,11 +213,12 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../tut_trajopt.html">Trajectory Optimization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="udp_sf_point2point.html">Point to point Sims-FLanagan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl.html">Planet to planet Sims-Flanagan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="udp_sf_pl2pl_alpha.html">Planet to planet Sims-Flanagan (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_zoh_point2point.html">Point to Point Zero Order Hold</a></li>
 
 
 <li class="toctree-l2"><a class="reference internal" href="udp_zoh_pl2pl.html">Zero-Order Hold Planet-to-Planet Low-Thrust Transfer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_alpha.html">Planet to planet low-thrust (with Alpha encoding)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga.html">Multiple Gravity Assist (MGA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_mga_1dsm.html">Multiple Gravity Assist with one DSM (MGA-1DSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="udp_pl2pl_N_impulses.html">Multiple impulses</a></li>
@@ -914,6 +915,9 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
@@ -923,15 +927,12 @@ This program contains Ipopt, a library for large-scale nonlinear optimization.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1259.900882207197
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+Final mass is: 1259.9008822098929
 Hamiltonian at the final point is: [-0.03600518] 
 
-Total time to success: 7.811 seconds
-Number of successes: 9 over 10 trials (90.0 %)
+Total time to success: 7.755 seconds
+Number of successes: 8 over 10 trials (80.0 %)
 </pre></div>
 </div>
 </div>
@@ -943,33 +944,30 @@ Number of successes: 9 over 10 trials (90.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.x
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xx
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xx
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xx
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.x
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-Final mass is: 1259.9008822031772
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x
+Final mass is: 1259.9008822458497
 Hamiltonian at the final point is: [-0.03600518] 
 
-Total time to success: 2.660 seconds
-Number of successes: 6 over 10 trials (60.0 %)
+Total time to success: 1.840 seconds
+Number of successes: 3 over 10 trials (30.0 %)
 </pre></div>
 </div>
 </div>
@@ -982,7 +980,7 @@ Number of successes: 6 over 10 trials (60.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1f1b8078f6b24ca622d065ed495f211210f58d5ecd0063d1a6fe96ad1ac1e4ad.png" src="../_images/1f1b8078f6b24ca622d065ed495f211210f58d5ecd0063d1a6fe96ad1ac1e4ad.png" />
+<img alt="../_images/8fad93f29dc741024bb2a895a191210b0fc0d6f85754aed48040c6fa16f61d7e.png" src="../_images/8fad93f29dc741024bb2a895a191210b0fc0d6f85754aed48040c6fa16f61d7e.png" />
 </div>
 </div>
 <p>Thrust arcs are indicated with a red color, ballistic with blue.</p>
@@ -993,7 +991,7 @@ Number of successes: 6 over 10 trials (60.0 %)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/936860696781dda22eb1deb3b01a6a8053aa7e740e7fda78802c7f16779b4fe7.png" src="../_images/936860696781dda22eb1deb3b01a6a8053aa7e740e7fda78802c7f16779b4fe7.png" />
+<img alt="../_images/2e757348875f17cf2f7592cfef484f7abc7068a41ff415bfcab988657edf4573.png" src="../_images/2e757348875f17cf2f7592cfef484f7abc7068a41ff415bfcab988657edf4573.png" />
 </div>
 </div>
 </section>
