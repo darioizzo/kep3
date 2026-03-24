@@ -1,0 +1,111 @@
+Traceback (most recent call last):
+  File "/home/runner/local/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/runner/local/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/runner/local/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/runner/local/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/runner/local/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/runner/local/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/local/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+pop = multistart(minpack_g, n_trials=10)
+------------------
+
+----- stdout -----
+.
+----- stdout -----
+.
+----- stdout -----
+.
+----- stdout -----
+.
+----- stdout -----
+.
+----- stdout -----
+x
+------------------
+
+[31m---------------------------------------------------------------------------[39m
+[31mValueError[39m                                Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[18][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m pop = [43mmultistart[49m[43m([49m[43mminpack_g[49m[43m,[49m[43m [49m[43mn_trials[49m[43m=[49m[32;43m10[39;49m[43m)[49m
+
+[36mCell[39m[36m [39m[32mIn[16][39m[32m, line 10[39m, in [36mmultistart[39m[34m(algo, n_trials)[39m
+[32m      8[39m pop = pg.population(prob,[32m1[39m)
+[32m      9[39m time_start = time.time()
+[32m---> [39m[32m10[39m pop = [43malgo[49m[43m.[49m[43mevolve[49m[43m([49m[43mpop[49m[43m)[49m
+[32m     11[39m time_end = time.time()
+[32m     12[39m total_time += time_end - time_start
+
+[36mCell[39m[36m [39m[32mIn[15][39m[32m, line 14[39m, in [36mmy_solver.evolve[39m[34m(self, pop)[39m
+[32m     12[39m         G[sparsity[:, [32m0[39m], sparsity[:, [32m1[39m]] = prob.gradient(x)
+[32m     13[39m         [38;5;28;01mreturn[39;00m G.reshape(n,n)
+[32m---> [39m[32m14[39m     res = [43mroot[49m[43m([49m[38;5;28;43;01mlambda[39;49;00m[43m [49m[43mx[49m[43m:[49m[43m [49m[43m[[49m[32;43m0[39;49m[43m][49m[43m [49m[43m+[49m[43m  [49m[38;5;28;43mlist[39;49m[43m([49m[43mprob[49m[43m.[49m[43mfitness[49m[43m([49m[43mx[49m[43m)[49m[43m[[49m[32;43m1[39;49m[43m:[49m[43m][49m[43m)[49m[43m,[49m[43m [49m[43mx0[49m[43m,[49m[43m [49m[43mmethod[49m[43m=[49m[33;43m"[39;49m[33;43mhybr[39;49m[33;43m"[39;49m[43m,[49m[43m [49m[43mtol[49m[43m=[49m[32;43m1e-8[39;49m[43m,[49m[43m [49m[43moptions[49m[43m [49m[43m=[49m[43m [49m[43m{[49m[33;43m"[39;49m[33;43mfactor[39;49m[33;43m"[39;49m[43m:[49m[43m [49m[32;43m1.[39;49m[43m,[49m[43m [49m[33;43m"[39;49m[33;43mdiag[39;49m[33;43m"[39;49m[43m:[49m[43m [49m[43m[[49m[32;43m1[39;49m[43m][49m[43m*[49m[43m([49m[43mn[49m[43m)[49m[43m}[49m[43m,[49m[43m [49m[43mjac[49m[43m=[49m[43mdense_grad[49m[43m)[49m  [38;5;66;03m# factor=1 is very important for convergence[39;00m
+[32m     15[39m [38;5;28;01melse[39;00m:
+[32m     16[39m     res = root([38;5;28;01mlambda[39;00m x: [[32m0[39m] +  [38;5;28mlist[39m(prob.fitness(x)[[32m1[39m:]), x0, method=[33m"[39m[33mhybr[39m[33m"[39m, tol=[32m1e-8[39m, options = {[33m"[39m[33mfactor[39m[33m"[39m: [32m1.[39m, [33m"[39m[33mdiag[39m[33m"[39m: [[32m1[39m]*(n)})  [38;5;66;03m# factor=1 is very important for convergence[39;00m
+
+[36mFile [39m[32m~/local/lib/python3.14/site-packages/scipy/optimize/_root.py:254[39m, in [36mroot[39m[34m(fun, x0, args, method, jac, tol, callback, options)[39m
+[32m    251[39m         options.setdefault([33m'[39m[33mfatol[39m[33m'[39m, np.inf)
+[32m    253[39m [38;5;28;01mif[39;00m meth == [33m'[39m[33mhybr[39m[33m'[39m:
+[32m--> [39m[32m254[39m     sol = [43m_root_hybr[49m[43m([49m[43m_wrapped_fun[49m[43m,[49m[43m [49m[43mx0[49m[43m,[49m[43m [49m[43margs[49m[43m=[49m[43margs[49m[43m,[49m[43m [49m[43mjac[49m[43m=[49m[43mjac[49m[43m,[49m[43m [49m[43m*[49m[43m*[49m[43moptions[49m[43m)[49m
+[32m    255[39m [38;5;28;01melif[39;00m meth == [33m'[39m[33mlm[39m[33m'[39m:
+[32m    256[39m     sol = _root_leastsq(_wrapped_fun, x0, args=args, jac=jac, **options)
+
+[36mFile [39m[32m~/local/lib/python3.14/site-packages/scipy/optimize/_minpack_py.py:256[39m, in [36m_root_hybr[39m[34m(func, x0, args, jac, col_deriv, xtol, maxfev, band, eps, factor, diag, **unknown_options)[39m
+[32m    254[39m     [38;5;28;01mif[39;00m (maxfev == [32m0[39m):
+[32m    255[39m         maxfev = [32m100[39m * (n + [32m1[39m)
+[32m--> [39m[32m256[39m     retval = [43m_minpack[49m[43m.[49m[43m_hybrj[49m[43m([49m[43mfunc[49m[43m,[49m[43m [49m[43mDfun[49m[43m,[49m[43m [49m[43mx0[49m[43m,[49m[43m [49m[43margs[49m[43m,[49m[43m [49m[32;43m1[39;49m[43m,[49m
+[32m    257[39m [43m                             [49m[43mcol_deriv[49m[43m,[49m[43m [49m[43mxtol[49m[43m,[49m[43m [49m[43mmaxfev[49m[43m,[49m[43m [49m[43mfactor[49m[43m,[49m[43m [49m[43mdiag[49m[43m)[49m
+[32m    259[39m x, status = retval[[32m0[39m], retval[-[32m1[39m]
+[32m    261[39m errors = {[32m0[39m: [33m"[39m[33mImproper input parameters were entered.[39m[33m"[39m,
+[32m    262[39m           [32m1[39m: [33m"[39m[33mThe solution converged.[39m[33m"[39m,
+[32m    263[39m           [32m2[39m: [33m"[39m[33mThe number of calls to function has [39m[33m"[39m
+[32m   (...)[39m[32m    272[39m               [33m"[39m[33mten iterations.[39m[33m"[39m,
+[32m    273[39m           [33m'[39m[33munknown[39m[33m'[39m: [33m"[39m[33mAn error occurred.[39m[33m"[39m}
+
+[36mFile [39m[32m~/local/lib/python3.14/site-packages/scipy/optimize/_root.py:216[39m, in [36mroot.<locals>._wrapped_fun[39m[34m(*fargs)[39m
+[32m    211[39m [38;5;250m[39m[33;03m"""[39;00m
+[32m    212[39m [33;03mWrapped `func` to track the number of times[39;00m
+[32m    213[39m [33;03mthe function has been called.[39;00m
+[32m    214[39m [33;03m"""[39;00m
+[32m    215[39m _wrapped_fun.nfev += [32m1[39m
+[32m--> [39m[32m216[39m [38;5;28;01mreturn[39;00m [43mfun[49m[43m([49m[43m*[49m[43mfargs[49m[43m)[49m
+
+[36mCell[39m[36m [39m[32mIn[15][39m[32m, line 14[39m, in [36mmy_solver.evolve.<locals>.<lambda>[39m[34m(x)[39m
+[32m     12[39m         G[sparsity[:, [32m0[39m], sparsity[:, [32m1[39m]] = prob.gradient(x)
+[32m     13[39m         [38;5;28;01mreturn[39;00m G.reshape(n,n)
+[32m---> [39m[32m14[39m     res = root([38;5;28;01mlambda[39;00m x: [[32m0[39m] +  [38;5;28mlist[39m([43mprob[49m[43m.[49m[43mfitness[49m[43m([49m[43mx[49m[43m)[49m[[32m1[39m:]), x0, method=[33m"[39m[33mhybr[39m[33m"[39m, tol=[32m1e-8[39m, options = {[33m"[39m[33mfactor[39m[33m"[39m: [32m1.[39m, [33m"[39m[33mdiag[39m[33m"[39m: [[32m1[39m]*(n)}, jac=dense_grad)  [38;5;66;03m# factor=1 is very important for convergence[39;00m
+[32m     15[39m [38;5;28;01melse[39;00m:
+[32m     16[39m     res = root([38;5;28;01mlambda[39;00m x: [[32m0[39m] +  [38;5;28mlist[39m(prob.fitness(x)[[32m1[39m:]), x0, method=[33m"[39m[33mhybr[39m[33m"[39m, tol=[32m1e-8[39m, options = {[33m"[39m[33mfactor[39m[33m"[39m: [32m1.[39m, [33m"[39m[33mdiag[39m[33m"[39m: [[32m1[39m]*(n)})  [38;5;66;03m# factor=1 is very important for convergence[39;00m
+
+[36mFile [39m[32m~/local/lib/python3.14/site-packages/pykep/trajopt/_pontryagin_equinoctial.py:559[39m, in [36mpontryagin_equinoctial_time.fitness[39m[34m(self, x)[39m
+[32m    555[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mfitness[39m([38;5;28mself[39m, x):
+[32m    556[39m     [38;5;66;03m# x = [lx, ly, lz, lvx, lvy, lvz, lm, (l0), tf][39;00m
+[32m    557[39m     [38;5;66;03m# Single Shooting[39;00m
+[32m    558[39m     [38;5;28mself[39m.set_ta_state(x)
+[32m--> [39m[32m559[39m     [38;5;28;43mself[39;49m[43m.[49m[43mta[49m[43m.[49m[43mpropagate_until[49m[43m([49m[43mx[49m[43m[[49m[43m-[49m[32;43m1[39;49m[43m][49m[43m)[49m
+[32m    561[39m     [38;5;66;03m# Target elements are computed here once, but the target mean longitude will change[39;00m
+[32m    562[39m     posvelf = [38;5;28mself[39m.target.eph([38;5;28mself[39m.t0 + x[-[32m1[39m] * [38;5;28mself[39m.TIME * pk.SEC2DAY)
+
+[31mValueError[39m: A non-finite time was passed to the propagate_until() function of an adaptive Taylor integrator
+
